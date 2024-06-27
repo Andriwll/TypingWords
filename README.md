@@ -9,8 +9,8 @@ Por favor baixar o zip que é lançado!
 ## Atual versão.
 ![Versaofinal](https://i.imgur.com/McGgx2j.png)
 
-![Funcionamento](https://github.com/Andriwll/TypingWords/assets/75597221/26f45dfc-f291-486f-94ec-d866cd75e0dc.mp4)
+## Funcionamento
 
-
+https://github.com/Andriwll/TypingWords/assets/75597221/9e6be852-6008-4aaf-b268-ce49a8dabeb0
 
 
