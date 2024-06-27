@@ -9,7 +9,7 @@ Por favor baixar o zip que é lançado!
 ## Atual versão.
 ![Versaofinal](https://i.imgur.com/McGgx2j.png)
 
-![giffuncionando](https://imgur.com/h6qUjvk.gif)
+![giffuncionando](https://imgur.com/h6qUjvk)
 
 
 
