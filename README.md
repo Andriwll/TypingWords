@@ -7,7 +7,7 @@ Versão inicial.
 ![PrototipoDosGuri](https://github.com/Andriwll/TypingWords/assets/75597221/2cd6b449-a7ba-4b16-9112-502e765ff968)
 
 Atual versão.
-![Versaofinal](https://imgur.com/a/dpq03bV)
+![Versaofinal](https://imgur.com/a/dpq03bV.png)
 
 
 
