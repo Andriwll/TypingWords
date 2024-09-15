@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dc3q1sp7xnlm5"
+path="res://.godot/imported/curtain.wav-7916f1de630f43d5546c07d8c74885d5.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/curtain.wav"
+dest_files=["res://.godot/imported/curtain.wav-7916f1de630f43d5546c07d8c74885d5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

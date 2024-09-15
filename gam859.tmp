@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=3 uid="uid://ws3iguq2djax"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_ekiai"]
+[ext_resource type="Theme" uid="uid://db7n3l7o7n4fl" path="res://resources/themes/labels/labels.tres" id="2_tjon4"]
+
+[node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekiai")
+
+[node name="game" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="labelDificuldade" type="Label" parent="game"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 23.0
+offset_right = 230.0
+offset_bottom = 123.0
+theme = ExtResource("2_tjon4")
+theme_override_font_sizes/font_size = 50
+text = "adasda"
+
+[node name="labelEnglish" type="Label" parent="game"]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 0
+offset_left = 518.0
+offset_top = 391.0
+offset_right = 734.0
+offset_bottom = 491.0
+theme = ExtResource("2_tjon4")
+text = "adsadasda"
+
+[node name="responseEdit" type="LineEdit" parent="game"]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 391.0
+offset_right = 646.0
+offset_bottom = 466.0
+theme = ExtResource("2_tjon4")
+expand_to_text_length = true
+
+[node name="labelPTBR" type="Label" parent="game"]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 271.0
+offset_right = 662.0
+offset_bottom = 371.0
+theme = ExtResource("2_tjon4")
+text = "adsada"
+
+[node name="labelTime" type="Label" parent="game"]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 30.0
+offset_right = 1094.0
+offset_bottom = 179.0
+theme = ExtResource("2_tjon4")
+theme_override_font_sizes/font_size = 100
+text = "30
+"
+
+[node name="labelPontos" type="Label" parent="game"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 123.0
+offset_right = 269.0
+offset_bottom = 198.0
+theme = ExtResource("2_tjon4")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Tempo" type="Timer" parent="game"]
+autostart = true
+
+[node name="check" type="Timer" parent="game/Tempo"]
+wait_time = 0.1
+autostart = true
+
+[node name="shaker" type="Timer" parent="game/Tempo"]
+wait_time = 0.1
+autostart = true
+
+[node name="Menu" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="Menu"]
+offset_left = 526.0
+offset_top = 274.0
+offset_right = 626.0
+offset_bottom = 374.0
+
+[connection signal="text_changed" from="game/responseEdit" to="." method="_on_response_edit_text_changed"]
+[connection signal="timeout" from="game/Tempo/check" to="." method="_on_check_timeout"]
+[connection signal="timeout" from="game/Tempo/shaker" to="." method="_on_shaker_timeout"]
+[connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]

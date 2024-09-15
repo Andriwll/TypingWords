@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfyigrtasp1gj"
+path="res://.godot/imported/telescope.wav-2db3dcc2130085dd64d91d0e73024f21.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/telescope.wav"
+dest_files=["res://.godot/imported/telescope.wav-2db3dcc2130085dd64d91d0e73024f21.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

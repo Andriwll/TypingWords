@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fe6x1lerrp6i"
+path="res://.godot/imported/identification.wav-35e844d968a9c431c2cbc9f523851319.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.1/sounds/identification.wav"
+dest_files=["res://.godot/imported/identification.wav-35e844d968a9c431c2cbc9f523851319.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

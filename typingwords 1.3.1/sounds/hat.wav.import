@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7y3emq560cpu"
+path="res://.godot/imported/hat.wav-68905e5257fa23a56ad4b54cf6160e6c.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.1/sounds/hat.wav"
+dest_files=["res://.godot/imported/hat.wav-68905e5257fa23a56ad4b54cf6160e6c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

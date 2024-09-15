@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bdv7rjjaldx4i"]
+
+[ext_resource type="FontFile" uid="uid://bw1vbwg17jnum" path="res://resources/fonts/Supertalls.otf" id="1_5fthe"]
+[ext_resource type="StyleBox" uid="uid://c7wrxmgtxi1ti" path="res://resources/themes/butoes.tres" id="2_xca7x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0dgo"]
+bg_color = Color(0.131769, 0.42616, 4.81307e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6iiqf"]
+bg_color = Color(0.378667, 0.71, 0.213, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5tit"]
+bg_color = Color(0.133333, 0.427451, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwokw"]
+bg_color = Color(0.0866666, 0.26, 0, 1)
+border_width_left = 10
+border_color = Color(0.0862745, 0.258824, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_met0h"]
+bg_color = Color(0.14, 0.42, 0, 1)
+border_color = Color(0.141176, 0.419608, 0, 1)
+
+[resource]
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_5fthe")
+Button/styles/disabled = ExtResource("2_xca7x")
+Button/styles/focus = ExtResource("2_xca7x")
+Button/styles/hover = ExtResource("2_xca7x")
+Button/styles/normal = ExtResource("2_xca7x")
+Button/styles/pressed = ExtResource("2_xca7x")
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_5fthe")
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/normal_font = ExtResource("1_5fthe")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_h0dgo")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_6iiqf")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_s5tit")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_dwokw")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_met0h")

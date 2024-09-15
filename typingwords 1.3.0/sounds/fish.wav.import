@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dylftm6ak7y26"
+path="res://.godot/imported/fish.wav-7234cbbc3f4611e78127c91834d87952.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/fish.wav"
+dest_files=["res://.godot/imported/fish.wav-7234cbbc3f4611e78127c91834d87952.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

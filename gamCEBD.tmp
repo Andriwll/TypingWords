@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://ws3iguq2djax"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_ekiai"]
+[ext_resource type="Theme" uid="uid://db7n3l7o7n4fl" path="res://resources/themes/labels/labels.tres" id="2_tjon4"]
+
+[node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekiai")
+
+[node name="labelDificuldade" type="Label" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+theme = ExtResource("2_tjon4")
+text = "adasda"
+
+[node name="labelEnglish" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 0
+offset_left = 526.0
+offset_top = 274.0
+offset_right = 626.0
+offset_bottom = 374.0
+theme = ExtResource("2_tjon4")
+text = "adsadasda"
+
+[node name="responseEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 274.0
+offset_right = 599.813
+offset_bottom = 305.0
+theme = ExtResource("2_tjon4")
+expand_to_text_length = true
+
+[node name="labelPTBR" type="Label" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 154.0
+offset_right = 626.0
+offset_bottom = 254.0
+theme = ExtResource("2_tjon4")
+text = "adsada"
+
+[node name="labelTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1052.0
+offset_right = 1152.0
+offset_bottom = 100.0
+theme = ExtResource("2_tjon4")
+text = "asdasddas"
+
+[node name="labelPontos" type="Label" parent="."]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 91.0
+offset_bottom = 47.0
+theme = ExtResource("2_tjon4")
+text = "sadasdasda"
+
+[node name="Tempo" type="Timer" parent="."]
+autostart = true
+
+[node name="check" type="Timer" parent="Tempo"]
+wait_time = 0.1
+autostart = true
+
+[node name="shaker" type="Timer" parent="Tempo"]
+wait_time = 0.1
+autostart = true
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 388.0
+offset_right = 758.0
+offset_bottom = 396.0
+
+[node name="Label" type="Label" parent="HScrollBar"]
+layout_mode = 0
+offset_right = 356.0
+offset_bottom = 226.0
+
+[connection signal="text_changed" from="responseEdit" to="." method="_on_response_edit_text_changed"]
+[connection signal="timeout" from="Tempo/check" to="." method="_on_check_timeout"]
+[connection signal="timeout" from="Tempo/shaker" to="." method="_on_shaker_timeout"]

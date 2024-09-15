@@ -1,0 +1,558 @@
+[gd_scene load_steps=27 format=3 uid="uid://ws3iguq2djax"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_ekiai"]
+[ext_resource type="Theme" uid="uid://db7n3l7o7n4fl" path="res://resources/themes/labels/labels.tres" id="2_tjon4"]
+[ext_resource type="Texture2D" uid="uid://ct1m2pm7cxiqx" path="res://resources/png/icon.png" id="3_s8iyq"]
+[ext_resource type="AudioStream" uid="uid://c0cxle8byeu6q" path="res://resources/sounds/correct.wav" id="3_x18g4"]
+[ext_resource type="AudioStream" uid="uid://bc7g8xyj3di4u" path="res://resources/sounds/countdown.wav" id="4_d5etq"]
+[ext_resource type="AudioStream" uid="uid://c4yv0kriuefyb" path="res://resources/sounds/menuclick.wav" id="4_f2k6q"]
+[ext_resource type="StyleBox" uid="uid://sbbfpm3ag8ml" path="res://resources/themes/icon.tres" id="5_5ehp6"]
+[ext_resource type="Texture2D" uid="uid://chwq4yu7mtror" path="res://resources/png/background.png" id="5_6fh78"]
+[ext_resource type="StyleBox" uid="uid://c7wrxmgtxi1ti" path="res://resources/themes/butoes.tres" id="5_26cn0"]
+[ext_resource type="StyleBox" uid="uid://d4eo22gj8h7hs" path="res://resources/themes/ball.tres" id="6_tsy07"]
+[ext_resource type="Theme" uid="uid://da8dm37c3he4b" path="res://resources/themes/words.tres" id="7_5fpqq"]
+[ext_resource type="FontFile" uid="uid://bw1vbwg17jnum" path="res://resources/fonts/Supertalls.otf" id="7_q8jye"]
+[ext_resource type="StyleBox" uid="uid://wx0d676aiow8" path="res://resources/themes/backDiff.tres" id="9_ca406"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qiuj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a38u"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d121h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_po0pn"]
+
+[sub_resource type="Theme" id="Theme_n3b2s"]
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.282353, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.282353, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("7_q8jye")
+Button/styles/focus = SubResource("StyleBoxEmpty_qiuj5")
+Button/styles/hover = ExtResource("5_26cn0")
+Button/styles/normal = ExtResource("5_26cn0")
+Button/styles/pressed = SubResource("StyleBoxFlat_5a38u")
+Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("7_q8jye")
+LineEdit/colors/caret_color = Color(0.95, 0.95, 0.95, 1)
+LineEdit/font_sizes/font_size = 50
+LineEdit/fonts/font = ExtResource("7_q8jye")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_d121h")
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_po0pn")
+
+[sub_resource type="Curve" id="Curve_gnhh8"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -360), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_aflp0"]
+colors = PackedColorArray(1, 1, 1, 1, 0.182715, 0.864119, 0, 1)
+
+[sub_resource type="Animation" id="Animation_vcnti"]
+resource_name = "disappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0w236"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0yy8t"]
+_data = {
+"RESET": SubResource("Animation_0w236"),
+"disappear": SubResource("Animation_vcnti")
+}
+
+[sub_resource type="Animation" id="Animation_yxrl4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h0vbg"]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4r5fv"]
+_data = {
+"RESET": SubResource("Animation_yxrl4"),
+"appear": SubResource("Animation_h0vbg")
+}
+
+[node name="wholegame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekiai")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -244.0
+offset_right = 468.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6fh78")
+
+[node name="contagemLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_tjon4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_d5etq")
+
+[node name="game" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="iconBranding" type="TextureRect" parent="game"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 560.0
+offset_right = 145.0
+offset_bottom = 688.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_tjon4")
+texture = ExtResource("3_s8iyq")
+
+[node name="iconPanel" type="Panel" parent="game"]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 560.0
+offset_right = 145.0
+offset_bottom = 688.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = ExtResource("5_5ehp6")
+
+[node name="backPanel" type="Panel" parent="game"]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -74.0
+offset_right = 309.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_26cn0")
+
+[node name="labelPTBR" type="Label" parent="game"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 290.0
+offset_top = -74.5
+offset_right = 290.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_5fpqq")
+text = "adsada"
+
+[node name="labelEnglish" type="Label" parent="game"]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 290.0
+offset_top = 82.0
+offset_right = 290.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_5fpqq")
+text = "adsadasda"
+text_direction = 1
+
+[node name="responseEdit" type="LineEdit" parent="game"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 82.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_5fpqq")
+flat = true
+
+[node name="timePanel" type="Panel" parent="game"]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 179.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("6_tsy07")
+
+[node name="labelTime" type="Label" parent="game"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 179.0
+grow_horizontal = 0
+theme = SubResource("Theme_n3b2s")
+theme_override_font_sizes/font_size = 100
+text = "30
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="backDiff" type="Panel" parent="game"]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 223.0
+offset_bottom = 226.0
+theme_override_styles/panel = ExtResource("9_ca406")
+
+[node name="labelDificuldade" type="Label" parent="game"]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 240.0
+offset_bottom = 143.0
+theme = ExtResource("2_tjon4")
+theme_override_font_sizes/font_size = 50
+text = "adasda"
+
+[node name="labelPontos" type="Label" parent="game"]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 133.0
+offset_right = 279.0
+offset_bottom = 208.0
+theme = ExtResource("2_tjon4")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Tempo" type="Timer" parent="game"]
+autostart = true
+
+[node name="check" type="Timer" parent="game/Tempo"]
+wait_time = 0.1
+autostart = true
+
+[node name="Contagem" type="Timer" parent="game"]
+wait_time = 3.0
+
+[node name="correctSound" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("3_x18g4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="game"]
+position = Vector2(844, 233)
+emitting = false
+amount = 10
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 700)
+initial_velocity_min = 250.0
+initial_velocity_max = 250.0
+angle_min = -509.5
+angle_max = 100.0
+angle_curve = SubResource("Curve_gnhh8")
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color_initial_ramp = SubResource("Gradient_aflp0")
+
+[node name="pararParticula" type="Timer" parent="game/CPUParticles2D"]
+wait_time = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game/CPUParticles2D"]
+libraries = {
+"": SubResource("AnimationLibrary_0yy8t")
+}
+
+[node name="losePopup" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="losePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_26cn0")
+
+[node name="background" type="ColorRect" parent="losePopup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.607843)
+
+[node name="Label" type="Label" parent="losePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -94.0
+offset_right = 125.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_tjon4")
+text = "Fim de Jogo."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="losePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = 3.0
+offset_right = 290.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="playBut" type="Button" parent="losePopup/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_tjon4")
+text = "Novo Jogo"
+
+[node name="menuBut" type="Button" parent="losePopup/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_tjon4")
+text = "Menu"
+
+[node name="loseAppear" type="AnimationPlayer" parent="losePopup"]
+libraries = {
+"": SubResource("AnimationLibrary_4r5fv")
+}
+
+[node name="click" type="AudioStreamPlayer" parent="losePopup"]
+stream = ExtResource("4_f2k6q")
+
+[node name="namePopup" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="namePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_26cn0")
+
+[node name="background" type="ColorRect" parent="namePopup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.607843)
+
+[node name="Label" type="Label" parent="namePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -107.5
+offset_right = 125.5
+offset_bottom = -32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_tjon4")
+text = "Digite seu nome"
+
+[node name="nameEdit" type="LineEdit" parent="namePopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 2.5
+offset_right = 64.0
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_tjon4")
+alignment = 1
+max_length = 3
+expand_to_text_length = true
+
+[node name="nameAppear" type="AnimationPlayer" parent="namePopup"]
+libraries = {
+"": SubResource("AnimationLibrary_4r5fv")
+}
+
+[node name="click" type="AudioStreamPlayer" parent="namePopup"]
+stream = ExtResource("4_f2k6q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[connection signal="text_changed" from="game/responseEdit" to="." method="_on_response_edit_text_changed"]
+[connection signal="timeout" from="game/Tempo" to="." method="_on_tempo_timeout"]
+[connection signal="timeout" from="game/Tempo/check" to="." method="_on_check_timeout"]
+[connection signal="timeout" from="game/Contagem" to="." method="_on_contagem_timeout"]
+[connection signal="timeout" from="game/CPUParticles2D/pararParticula" to="." method="_on_parar_particula_timeout"]
+[connection signal="pressed" from="losePopup/HBoxContainer/playBut" to="." method="_on_play_but_pressed"]
+[connection signal="pressed" from="losePopup/HBoxContainer/menuBut" to="." method="_on_menu_but_pressed"]
+[connection signal="text_submitted" from="namePopup/nameEdit" to="." method="_on_name_edit_text_submitted"]

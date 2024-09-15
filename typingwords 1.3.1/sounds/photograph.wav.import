@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://351h7jjsqp65"
+path="res://.godot/imported/photograph.wav-9ce10cbd5744013dc50e7aab36197aab.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.1/sounds/photograph.wav"
+dest_files=["res://.godot/imported/photograph.wav-9ce10cbd5744013dc50e7aab36197aab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

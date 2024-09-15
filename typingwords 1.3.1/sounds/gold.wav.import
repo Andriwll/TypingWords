@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwpj6ebhauy24"
+path="res://.godot/imported/gold.wav-9f6270f80b35bdfc2ad1a9745f78cd31.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.1/sounds/gold.wav"
+dest_files=["res://.godot/imported/gold.wav-9f6270f80b35bdfc2ad1a9745f78cd31.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

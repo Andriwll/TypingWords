@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxvny37ha34i7"
+path="res://.godot/imported/flower.wav-908f1d51ad98cf4f9fe63b8bbf11ab39.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/flower.wav"
+dest_files=["res://.godot/imported/flower.wav-908f1d51ad98cf4f9fe63b8bbf11ab39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

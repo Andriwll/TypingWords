@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3h4qsbekdfxd"
+path="res://.godot/imported/newspaper.wav-1da786beaad1e9dfed0938bb215b0d55.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.1/sounds/newspaper.wav"
+dest_files=["res://.godot/imported/newspaper.wav-1da786beaad1e9dfed0938bb215b0d55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

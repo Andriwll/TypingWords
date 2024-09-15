@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://db8uph4wsnfi3"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_ros82"]
+[ext_resource type="Theme" uid="uid://db7n3l7o7n4fl" path="res://resources/themes/labels/labels.tres" id="2_231py"]
+[ext_resource type="FontFile" uid="uid://ddohgi34p7ydc" path="res://resources/fonts/MotleyForcesRegular-w1rZ3.ttf" id="3_0dnoa"]
+
+[sub_resource type="Animation" id="Animation_wesr7"]
+resource_name = "moving"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.274017, 0.274017, -0.274017]
+}
+
+[sub_resource type="Animation" id="Animation_5nber"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2oj2"]
+_data = {
+"RESET": SubResource("Animation_5nber"),
+"moving": SubResource("Animation_wesr7")
+}
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ros82")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 260.0
+offset_right = 664.0
+offset_bottom = 553.0
+
+[node name="jogarBut" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_231py")
+text = "Jogar"
+
+[node name="opcoesBut" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_231py")
+text = "opções"
+
+[node name="sairBut" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_231py")
+text = "Sair"
+
+[node name="diciBut" type="Button" parent="."]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 545.0
+offset_right = 1132.0
+offset_bottom = 628.0
+theme = ExtResource("2_231py")
+text = "Dicionário"
+
+[node name="titileLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -220.0
+offset_right = 304.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(304, 40)
+theme_override_fonts/font = ExtResource("3_0dnoa")
+theme_override_font_sizes/font_size = 100
+text = "Typing Words"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="titileLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_p2oj2")
+}
+
+[connection signal="pressed" from="VBoxContainer/jogarBut" to="." method="_on_jogar_but_pressed"]

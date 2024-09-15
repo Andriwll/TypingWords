@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ccb3s8v5evpox"
+path="res://.godot/imported/perfume.wav-d40945687dca72d6538d9f961df4627a.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/perfume.wav"
+dest_files=["res://.godot/imported/perfume.wav-d40945687dca72d6538d9f961df4627a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

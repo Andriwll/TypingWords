@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://da8dm37c3he4b"]
+
+[ext_resource type="FontFile" uid="uid://bw1vbwg17jnum" path="res://resources/fonts/Supertalls.otf" id="1_t14cy"]
+[ext_resource type="StyleBox" uid="uid://c7wrxmgtxi1ti" path="res://resources/themes/butoes.tres" id="2_2afo1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qiuj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a38u"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d121h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_po0pn"]
+
+[resource]
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.282353, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.282353, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_t14cy")
+Button/styles/focus = SubResource("StyleBoxEmpty_qiuj5")
+Button/styles/hover = ExtResource("2_2afo1")
+Button/styles/normal = ExtResource("2_2afo1")
+Button/styles/pressed = SubResource("StyleBoxFlat_5a38u")
+Label/font_sizes/font_size = 100
+Label/fonts/font = ExtResource("1_t14cy")
+LineEdit/colors/caret_color = Color(0.95, 0.95, 0.95, 1)
+LineEdit/font_sizes/font_size = 100
+LineEdit/fonts/font = ExtResource("1_t14cy")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_d121h")
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_po0pn")

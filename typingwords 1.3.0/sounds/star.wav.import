@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd87fyr11g3o6"
+path="res://.godot/imported/star.wav-a150379cec9d15eba4d7ddc23193cfbc.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/star.wav"
+dest_files=["res://.godot/imported/star.wav-a150379cec9d15eba4d7ddc23193cfbc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

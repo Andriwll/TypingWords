@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0g2jb7dwvyf1"
+path="res://.godot/imported/gate.wav-9be4e28948af8c0f050afdd090e786b3.sample"
+
+[deps]
+
+source_file="res://typingwords 1.3.0/sounds/gate.wav"
+dest_files=["res://.godot/imported/gate.wav-9be4e28948af8c0f050afdd090e786b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
