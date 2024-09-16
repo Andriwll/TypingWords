@@ -1,5 +1,0 @@
-apple=maçã
-orange=laranja
-grape=uva
-strawberry=morango
-mango=manga
