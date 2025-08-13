@@ -24,7 +24,7 @@ Este projeto foi desenvolvido como meu Trabalho de Conclusão de Curso (TCC) par
 ## 🚀 Como Jogar
 Para executar o projeto, você pode seguir os passos abaixo:
 1.  Vá para a seção de **[Releases](https://github.com/Andriwll/TypingWords/releases)** deste repositório.
-2.  Baixe o arquivo `.zip` da versão mais recente (ex: `TypingWords-v1.0.zip`).
+2.  Baixe o arquivo `.zip` da versão mais recente (ex: `typingwords.1.3.1.zip `).
 3.  Extraia a pasta do arquivo `.zip` e execute o `TypingWords.exe`.
 
 ---
